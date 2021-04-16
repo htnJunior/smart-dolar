@@ -2,6 +2,7 @@ const DataService = require('./DataScraper')
 
 module.exports = {
   ping: (req, res) => {
+    res.header('Access-Control-Allow-Origin', '*')
     res.json({ pong: true })
   },
 
@@ -19,6 +20,7 @@ module.exports = {
       json.result.error = 'Nenhum valor encontrado.'
     }
 
+    res.header('Access-Control-Allow-Origin', '*')
     res.json(json)
   },
   canadianDolar: async (req, res) => {
@@ -35,6 +37,7 @@ module.exports = {
       json.result.error = 'Nenhum valor encontrado.'
     }
 
+    res.header('Access-Control-Allow-Origin', '*')
     res.json(json)
   },
   australianDolar: async (req, res) => {
@@ -51,6 +54,7 @@ module.exports = {
       json.result.error = 'Nenhum valor encontrado.'
     }
 
+    res.header('Access-Control-Allow-Origin', '*')
     res.json(json)
   },
   euro: async (req, res) => {
@@ -67,6 +71,7 @@ module.exports = {
       json.result.error = 'Nenhum valor encontrado.'
     }
 
+    res.header('Access-Control-Allow-Origin', '*')
     res.json(json)
   },
   //news: async (req, res) => {},

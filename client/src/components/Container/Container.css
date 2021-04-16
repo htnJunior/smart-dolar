@@ -1,0 +1,29 @@
+.app {
+  background: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.text-inside {
+  font-size: 20px;
+  padding: 10px;
+  color: #000;
+}
+
+.number {
+  font-size: 70px;
+  color: rgb(110, 94, 254);
+}
+
+.cifrao {
+}
+
+.number-cifrao {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+  text-align: center;
+}

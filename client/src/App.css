@@ -4,3 +4,38 @@
   padding: 0;
   font-family: 'Montserrat', sans-serif;
 }
+
+body {
+  background-color: hsl(210, 36%, 96%);
+}
+
+.section {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+main {
+  min-height: 50vh;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  width: 80vw;
+  max-width: 620px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.underline {
+  height: 0.2rem;
+  width: 10rem;
+  background: hsl(205, 78%, 60%);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
