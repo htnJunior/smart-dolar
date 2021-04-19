@@ -1,19 +1,19 @@
 import React from 'react'
 import './Container.css'
-import Number from '../Number/Number'
+import NumberEur from '../Number/NumberEur'
 
-const Container = () => {
+const ContainerEur = () => {
   return (
     <article className="app">
-      <p className="text-inside">US$ 1 hoje está valendo</p>
+      <p className="text-inside">EUR$ 1 hoje está valendo</p>
       <div className="number-cifrao">
         <p className="cifrao">R$</p>
         <span className="number">
-          <Number />
+          <NumberEur />
         </span>
       </div>
     </article>
   )
 }
 
-export default Container
+export default ContainerEur

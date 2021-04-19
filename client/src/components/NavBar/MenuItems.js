@@ -1,22 +1,22 @@
 export const MenuItems = [
   {
     title: 'USD',
-    url: '#',
+    url: '/',
     cName: 'nav-links',
   },
   {
     title: 'CAD',
-    url: '#',
+    url: '/cad',
     cName: 'nav-links',
   },
   {
     title: 'AUD',
-    url: '#',
+    url: '/aud',
     cName: 'nav-links',
   },
   {
     title: 'EUR',
-    url: '#',
+    url: '/eur',
     cName: 'nav-links',
   },
 ]

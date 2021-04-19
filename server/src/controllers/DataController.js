@@ -8,16 +8,18 @@ module.exports = {
 
   americanDolar: async (req, res) => {
     let json = {
-      result: {
-        quotation: {},
-        error: {},
-      },
+      quotation: {},
+      error: {},
     }
+
     let value = await DataService.americanDolarConsult()
-    if (value) {
-      json.result.quotation = value
+    if (typeof value == 'string') {
+      if (value.includes(',')) {
+        const newValue = value.replace(',', '.')
+        json.quotation = newValue
+      }
     } else {
-      json.result.error = 'Nenhum valor encontrado.'
+      json.error = 'Nenhum valor encontrado.'
     }
 
     res.header('Access-Control-Allow-Origin', '*')
@@ -25,16 +27,17 @@ module.exports = {
   },
   canadianDolar: async (req, res) => {
     let json = {
-      result: {
-        quotation: {},
-        error: {},
-      },
+      quotation: {},
+      error: {},
     }
     let value = await DataService.canadianDolarConsult()
-    if (value) {
-      json.result.quotation = value
+    if (typeof value == 'string') {
+      if (value.includes(',')) {
+        const newValue = value.replace(',', '.')
+        json.quotation = newValue
+      }
     } else {
-      json.result.error = 'Nenhum valor encontrado.'
+      json.error = 'Nenhum valor encontrado.'
     }
 
     res.header('Access-Control-Allow-Origin', '*')
@@ -42,16 +45,17 @@ module.exports = {
   },
   australianDolar: async (req, res) => {
     let json = {
-      result: {
-        quotation: {},
-        error: {},
-      },
+      quotation: {},
+      error: {},
     }
     let value = await DataService.australianDolarConsult()
-    if (value) {
-      json.result.quotation = value
+    if (typeof value == 'string') {
+      if (value.includes(',')) {
+        const newValue = value.replace(',', '.')
+        json.quotation = newValue
+      }
     } else {
-      json.result.error = 'Nenhum valor encontrado.'
+      json.error = 'Nenhum valor encontrado.'
     }
 
     res.header('Access-Control-Allow-Origin', '*')
@@ -59,16 +63,17 @@ module.exports = {
   },
   euro: async (req, res) => {
     let json = {
-      result: {
-        quotation: {},
-        error: {},
-      },
+      quotation: {},
+      error: {},
     }
     let value = await DataService.euroConsult()
-    if (value) {
-      json.result.quotation = value
+    if (typeof value == 'string') {
+      if (value.includes(',')) {
+        const newValue = value.replace(',', '.')
+        json.quotation = newValue
+      }
     } else {
-      json.result.error = 'Nenhum valor encontrado.'
+      json.error = 'Nenhum valor encontrado.'
     }
 
     res.header('Access-Control-Allow-Origin', '*')

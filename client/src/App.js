@@ -1,32 +1,31 @@
 import React from 'react'
 import './App.css'
 import Navbar from './components/NavBar/Navbar'
-import Container from './components/Container/Container'
-import axios from 'axios'
-import cors from 'cors'
-
-const api = axios.create({
-  baseURL: `http://localhost:3003/api/dolar-americano`,
-})
+import ContainerHome from './components/Container/ContainerHome'
+import ContainerCad from './components/Container/ContainerCad'
+import ContainerAud from './components/Container/ContainerAud'
+import ContainerEur from './components/Container/ContainerEur'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
 const App = () => {
-  api.get('/').then((res) => {
-    console.log(res.data)
-  })
-
   return (
-    <>
+    <Router>
       <Navbar />
       <main>
         <section className="container">
           <div className="title">
-            <h2>Cotação Dolar Comercial</h2>
+            <h2>Cotação de Moedas</h2>
             <div className="underline"></div>
           </div>
-          <Container />
+          <Switch>
+            <Route path="/" exact component={ContainerHome} />
+            <Route path="/cad" component={ContainerCad} />
+            <Route path="/aud" component={ContainerAud} />
+            <Route path="/eur" component={ContainerEur} />
+          </Switch>
         </section>
       </main>
-    </>
+    </Router>
   )
 }
 
