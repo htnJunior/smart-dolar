@@ -8,6 +8,12 @@ server.use(cors())
 
 server.use('/api', routes)
 
-server.listen(process.env.PORT, () => {
-  console.log(`Servidor rodando na porta ${process.env.PORT}`)
+server.get('/', (req, res) => {
+  res.send('Welcome to my App.')
+})
+
+const PORT = process.env.PORT || 3003
+
+server.listen(PORT, () => {
+  console.log(`Servidor rodando na porta ${PORT}`)
 })
