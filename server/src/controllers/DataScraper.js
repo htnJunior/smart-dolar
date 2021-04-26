@@ -20,7 +20,10 @@ module.exports = {
     return dataInfo
   },
   canadianDolarConsult: async (req, res) => {
-    const browser = await puppeteer.launch()
+    const browser = await puppeteer.launch({args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox'
+    ]})
     const page = await browser.newPage()
     await page.goto('https://www.melhorcambio.com/dolar-canadense-hoje')
     const dataInfo = await page.evaluate(() => {
@@ -35,7 +38,10 @@ module.exports = {
     return dataInfo
   },
   australianDolarConsult: async (req, res) => {
-    const browser = await puppeteer.launch()
+    const browser = await puppeteer.launch({args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox'
+    ]})
     const page = await browser.newPage()
     await page.goto('https://www.melhorcambio.com/dolar-australiano-hoje')
     const dataInfo = await page.evaluate(() => {
@@ -50,7 +56,10 @@ module.exports = {
     return dataInfo
   },
   euroConsult: async (req, res) => {
-    const browser = await puppeteer.launch()
+    const browser = await puppeteer.launch({args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox'
+    ]})
     const page = await browser.newPage()
     await page.goto('https://www.melhorcambio.com/euro-hoje')
     const dataInfo = await page.evaluate(() => {
